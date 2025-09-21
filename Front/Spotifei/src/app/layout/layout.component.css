@@ -1,0 +1,86 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.menu {
+  width: 220px;
+  background-color: #000;
+  padding: 20px;
+}
+
+.menu h2 {
+  color: #1db954;
+  margin-bottom: 30px;
+}
+
+.menu nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.menu nav a:hover {
+  color: #1db954;
+}
+
+.conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212;
+  padding: 15px 25px;
+  border-bottom: 1px solid #282828;
+}
+
+.busca {
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #282828;
+  color: white;
+  font-size: 1rem;
+}
+
+.busca::placeholder {
+  color: #b3b3b3;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.95rem;
+}
+
+.acoes a {
+  color: white;
+  text-decoration: none;
+}
+
+.acoes a:hover {
+  color: #1db954;
+}
+
+.divisor {
+  color: #b3b3b3;
+}
+
+.pagina {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}

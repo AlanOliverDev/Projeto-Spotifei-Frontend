@@ -1,0 +1,54 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+app-menu {
+  flex: 0 0 220px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+
+}
+
+router-outlet {
+  flex: 1;
+  padding: 20px;
+}
+
+/* section */
+.equipes {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #121212;
+  color: #1db954;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+.equipes h2 {
+  font-size: 5.8rem;
+  margin-bottom: 100px;
+}
+
+.membros {
+  font-size: 1.8rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.membros div {
+  background-color: #282c34;
+  color: white;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}

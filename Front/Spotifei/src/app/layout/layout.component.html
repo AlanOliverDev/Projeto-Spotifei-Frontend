@@ -1,0 +1,31 @@
+<div class="layout">
+  <aside class="menu">
+    <h2>🎵 Spotifei</h2>
+    <nav>
+      <a routerLink="/">Início</a>
+      <a routerLink="/musicas">Músicas</a>
+      <a routerLink="/artistas">Artistas</a>
+      <a routerLink="/albuns">Álbuns</a>
+      <a routerLink="/equipe">Equipe</a>
+    </nav>
+  </aside>
+
+  <main class="conteudo">
+    <header class="topo">
+      
+
+      <input class="busca" type="text" placeholder="O que você quer ouvir?" />
+
+      <div class="acoes">
+        <a href="#">Premium</a>
+        <span class="divisor">|</span>
+        <a href="#">Inscreva-se</a>
+        <a href="#">Entrar</a>
+      </div>
+    </header>
+
+    <section class="pagina">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>
