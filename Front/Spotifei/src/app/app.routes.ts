@@ -1,22 +1,17 @@
 import { Routes } from '@angular/router';
 import { EquipeComponent } from './equipe/equipe.component';
-import { LayoutComponent } from './layout/layout.component';
+=======
+import { PerfilComponent } from './layout/perfil/perfil.component';
 import { LoginComponent } from './layout/login/login.component';
 
 export const routes: Routes = [
-  // Login sem layout
-  { path: 'login', component: LoginComponent },
+    { path: "equipe", component: EquipeComponent },
+    {path: "perfil", component: PerfilComponent},
+    {path: "login", component: LoginComponent},
+    {
+        path: "",
+        redirectTo: "login",
+        pathMatch: "full"
+    }
 
-  // Rotas que usam o layout
-  {
-    path: '',
-    component: LayoutComponent,
-    children: [
-      { path: 'equipe', component: EquipeComponent },
-      { path: '', redirectTo: 'equipe', pathMatch: 'full' }
-    ]
-  },
-
-  // fallback
-  { path: '**', redirectTo: 'login' }
 ];
