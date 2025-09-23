@@ -8,7 +8,9 @@ import { LoginComponent } from './layout/login/login.component';
 @Component({
   selector: 'app-root',
   standalone: true,
+
   imports: [RouterOutlet, LayoutComponent, PerfilComponent, LoginComponent ],
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
