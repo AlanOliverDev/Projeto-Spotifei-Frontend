@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* Aplica o reset para todos os elementos da página */
+* {
+  margin: 0;           /* Remove todas as margens externas padrão */
+  padding: 0;          /* Remove todos os espaçamentos internos padrão */
+  box-sizing: border-box; /* Faz com que largura e altura incluam padding e borda */
+}

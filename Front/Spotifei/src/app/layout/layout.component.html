@@ -1,30 +1,130 @@
-<div class="layout">
-  <aside class="menu">
-    <h2>🎵 Spotifei</h2>
-    <nav>
-      <a routerLink="/">Início</a>
-      <a routerLink="/musicas">Músicas</a>
-      <a routerLink="/artistas">Artistas</a>
-      <a routerLink="/albuns">Álbuns</a>
-      <a routerLink="/equipe">Equipe</a>
+<div class="estrutura">
+  <!-- Menu lateral -->
+  <aside class="menu-lateral">
+    <h1 class="logo">🎵 Spotifei</h1>
+    <nav class="navegacao">
+      <a routerLink="/" class="nav-item ativo">
+        <span class="nav-label">Início</span>
+      </a>
+      <a routerLink="/buscar" class="nav-item">
+        <span class="nav-label">Buscar</span>
+      </a>
+      <a routerLink="/biblioteca" class="nav-item">
+        <span class="nav-label">Sua Biblioteca</span>
+      </a>
     </nav>
   </aside>
 
-  <main class="conteudo">
-    <header class="topo">
-      
-
-      <input class="busca" type="text" placeholder="O que você quer ouvir?" />
-
-      <div class="acoes">
-        <a href="#">Premium</a>
-        <span class="divisor">|</span>
-        <a href="#">Inscreva-se</a>
-        <a href="#">Entrar</a>
+  <!-- Conteúdo -->
+  <main class="conteudo-principal">
+    <header class="topo-pagina">
+      <div class="logo-cabecalho">
+        <img src="/assets/logo.png" alt="Spotifei Logo" class="logo-imagem" />
+      </div>
+      <div class="caixa-busca">
+        <input class="busca" type="text" placeholder="O que você quer ouvir?" />
+      </div>
+      <div class="acoes-usuario">
+        <a href="#" class="link">Premium</a>
+        <a href="#" class="link">Suporte</a>
+        <a href="#" class="link">Baixar</a>
+        <span class="separador">|</span>
+        <a href="#" class="link">Inscreva-se</a>
+        <a href="#" class="link botao-entrar">Entrar</a>
       </div>
     </header>
-
-    <section class="pagina">
+    <section class="conteudo-pagina">
+      <!-- Conteúdo da página principal (exemplo: página inicial) -->
+      <div class="secoes-container">
+        <h2 class="secoes-titulo">Navegar por todas as seções</h2>
+        <div class="secoes-grid">
+          <!-- Música -->
+          <div class="secao-card musica">
+            <div class="card-conteudo">
+              <span class="card-icone">🎵</span>
+              <h3>Música</h3>
+            </div>
+          </div>
+          <!-- Podcasts -->
+          <div class="secao-card podcasts">
+            <div class="card-conteudo">
+              <span class="card-icone">🎙️</span>
+              <h3>Podcasts</h3>
+            </div>
+          </div>
+          <!-- Eventos ao vivo -->
+          <div class="secao-card eventos">
+            <div class="card-conteudo">
+              <span class="card-icone">🎤</span>
+              <h3>Eventos ao vivo</h3>
+            </div>
+          </div>
+          <!-- Feito para você -->
+          <div class="secao-card feito-para-voce">
+            <div class="card-conteudo">
+              <span class="card-icone">❤️</span>
+              <h3>Feito para você</h3>
+            </div>
+          </div>
+          <!-- Lançamentos -->
+          <div class="secao-card lancamentos">
+            <div class="card-conteudo">
+              <span class="card-icone">🚀</span>
+              <h3>Lançamentos</h3>
+            </div>
+          </div>
+          <!-- Brasil -->
+          <div class="secao-card brasil">
+            <div class="card-conteudo">
+              <span class="card-icone">🇧🇷</span>
+              <h3>Brasil</h3>
+            </div>
+          </div>
+          <!-- Sertanejo -->
+          <div class="secao-card sertanejo">
+            <div class="card-conteudo">
+              <span class="card-icone">🎸</span>
+              <h3>Sertanejo</h3>
+            </div>
+          </div>
+          <!-- Funk -->
+          <div class="secao-card funk">
+            <div class="card-conteudo">
+              <span class="card-icone">🎶</span>
+              <h3>Funk</h3>
+            </div>
+          </div>
+          <!-- Paradas -->
+          <div class="secao-card paradas">
+            <div class="card-conteudo">
+              <span class="card-icone">📊</span>
+              <h3>Paradas</h3>
+            </div>
+          </div>
+          <!-- Para lá das paradas -->
+          <div class="secao-card para-ladas-paradas">
+            <div class="card-conteudo">
+              <span class="card-icone">🔥</span>
+              <h3>Para lá das paradas</h3>
+            </div>
+          </div>
+          <!-- Lançamento de podcasts -->
+          <div class="secao-card lancamento-podcasts">
+            <div class="card-conteudo">
+              <span class="card-icone">📣</span>
+              <h3>Lançamento de podcasts</h3>
+            </div>
+          </div>
+          <!-- Podcasts com vídeo -->
+          <div class="secao-card podcasts-video">
+            <div class="card-conteudo">
+              <span class="card-icone">📺</span>
+              <h3>Podcasts com vídeo</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- router-outlet para outras rotas -->
       <router-outlet></router-outlet>
     </section>
   </main>
