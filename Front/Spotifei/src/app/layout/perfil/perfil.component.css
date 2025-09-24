@@ -1,0 +1,81 @@
+
+.perfil-container {
+  display: block;
+  background-color: #121212; 
+  min-height: 100vh;
+  color: white;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.perfil-header {
+  background: linear-gradient(to bottom, rgb(68, 204, 109), #121212);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.perfil-foto img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #222;
+  object-fit: cover;
+}
+
+.perfil-info h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.perfil-info p {
+  margin: 8px 0;
+  color: #bbb;
+}
+
+.perfil-botoes-container button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #1db954;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.perfil-botoes-container button:hover {
+  background: #1ed760;
+}
+
+.playlists {
+  padding: 20px;
+}
+
+.playlists h2 {
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+}
+
+.playlist-card {
+  background: #181818;
+  padding: 10px;
+  border-radius: 8px;
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.playlist-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.playlist-card:hover {
+  transform: scale(1.05);
+}
