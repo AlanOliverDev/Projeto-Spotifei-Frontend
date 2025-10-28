@@ -1,0 +1,107 @@
+.album-page {
+  background: linear-gradient(180deg, #181818, #000);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 3rem;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.album-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.album-cover {
+  width: 200px; /* ou o tamanho desejado */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-cover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+}
+
+.album-meta h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.album-meta h2 {
+  font-size: 1.6rem;
+  color: #b3b3b3;
+  margin: 0.4rem 0;
+}
+
+.album-meta .year {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.play-button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.play-button:hover {
+  background-color: #1ed760;
+  transform: scale(1.05);
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2.5rem;
+  border-top: 1px solid #333;
+}
+
+.track-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #222;
+  transition: background-color 0.2s;
+}
+
+.track-list li:hover {
+  background-color: #1a1a1a;
+}
+
+.track-index {
+  color: #888;
+  font-size: 0.9rem;
+  width: 2rem;
+  text-align: right;
+}
+
+.track-name {
+  flex: 1;
+  font-size: 1rem;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

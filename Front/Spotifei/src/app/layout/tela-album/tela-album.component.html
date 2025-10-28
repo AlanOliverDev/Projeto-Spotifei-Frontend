@@ -1,0 +1,20 @@
+<div class="album-page">
+  <div class="album-info">
+    <img src="https://th.bing.com/th/id/OIP.DX8m3X-nkyTxWqIdpoLuIAHaHa?w=185&h=185&c=7&r=0&o=7&pid=1.7&rm=3" alt="Capa do álbum" class="album-cover">
+
+
+    <div class="album-meta">
+      <h1>{{ album.title }}</h1>
+      <h2>{{ album.artist }}</h2>
+      <p class="year">{{ album.year }}</p>
+      <button class="play-button"> Reproduzir</button>
+    </div>
+  </div>
+
+  <ul class="track-list">
+    <li *ngFor="let track of album.tracks; let i = index">
+      <span class="track-index">{{ i + 1 }}.</span>
+      <span class="track-name">{{ track }}</span>
+    </li>
+  </ul>
+</div>
