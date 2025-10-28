@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
+
+
+
+import { RouterOutlet } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component';
+import { PerfilComponent } from './layout/perfil/perfil.component';
+import { LoginComponent } from './layout/login/login.component';
 import { TelaAlbum } from './tela-album/tela-album'; 
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TelaAlbum],
+
+  imports: [RouterOutlet, LayoutComponent, PerfilComponent, LoginComponent, TelaAlbum ],
+
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
