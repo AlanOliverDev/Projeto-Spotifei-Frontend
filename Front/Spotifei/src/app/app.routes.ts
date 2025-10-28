@@ -13,7 +13,7 @@ export const routes: Routes = [
     {path: "tela-album", component: TelaAlbumComponent},
     {
         path: "",
-        redirectTo: "login",
+        redirectTo: "layout",
         pathMatch: "full"
     }
 
