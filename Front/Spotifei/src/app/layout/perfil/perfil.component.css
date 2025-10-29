@@ -44,6 +44,11 @@
   cursor: pointer;
 }
 
+.perfil-botoes-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .perfil-botoes-container button:hover {
   background: #1ed760;
 }
