@@ -1,17 +1,18 @@
 <div class="login-wrapper">
   <div class="login-container">
     <h1>Spotify</h1>
-    <form>
+    <form (ngSubmit)="login()">
       <div class="input-group">
-        <input type="email" >
+        <input type="email" [(ngModel)]="email" name="email" required>
         <label>E-mail</label>
       </div>
       <div class="input-group">
-        <input type="password" >
+        <input type="password" [(ngModel)]="senha" name="senha" required>
         <label>Senha</label>
       </div>
-      <button routerLink="/layout">Entrar </button>
+      <button type="submit">Entrar</button>
     </form>
+    <p *ngIf="erro" class="error">{{ erro }}</p>
     <p>Não tem conta? <a href="#">Cadastre-se</a></p>
   </div>
 </div>

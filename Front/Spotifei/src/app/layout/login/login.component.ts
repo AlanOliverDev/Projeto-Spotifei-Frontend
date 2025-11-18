@@ -1,13 +1,43 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [FormsModule, NgIf, HttpClientModule, RouterLink],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  email: string = '';
+  senha: string = '';
+  erro: string = '';
 
+  constructor(private http: HttpClient, private router: Router) {}
+
+  login() {
+    if (!this.email || !this.senha) {
+      this.erro = "Preencha e-mail e senha!";
+      return;
+    }
+
+    this.http.post<boolean>('/api/usuarios', { email: this.email, senha: this.senha })
+      .subscribe({
+        next: (ok) => {
+          if (ok) {
+            this.erro = '';
+            this.router.navigate(['/layout']); // navega para a página principal
+          } else {
+            this.erro = 'Usuário ou senha inválidos';
+          }
+        },
+        error: (err) => {
+          console.error(err);
+          this.erro = 'Erro ao tentar conectar com o servidor!';
+        }
+      });
+  }
 }
