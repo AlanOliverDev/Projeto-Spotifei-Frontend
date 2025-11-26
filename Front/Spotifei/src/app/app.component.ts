@@ -5,13 +5,14 @@ import { PerfilComponent } from './layout/perfil/perfil.component';
 import { LoginComponent } from './layout/login/login.component';
 import { TelaAlbumComponent } from './layout/tela-album/tela-album.component';
 import { CriacaoPlaylistComponent } from './layout/criacao-playlist/criacao-playlist.component';
+import { PlanosComponent } from './planos/planos.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
 
-  imports: [RouterOutlet, LayoutComponent, PerfilComponent, LoginComponent, TelaAlbumComponent, CriacaoPlaylistComponent ],
+  imports: [RouterOutlet, LayoutComponent, PerfilComponent, LoginComponent, TelaAlbumComponent, CriacaoPlaylistComponent, PlanosComponent ],
 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

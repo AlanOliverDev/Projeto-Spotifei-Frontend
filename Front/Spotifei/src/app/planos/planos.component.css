@@ -1,0 +1,85 @@
+.planos-container {
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+    background: #121212;
+    min-height: 100vh;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1f1f1f;
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    box-shadow: 0 0 10px #0006;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1db954;
+    font-weight: bold;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card li {
+    margin: 8px 0;
+}
+
+button {
+    background: #1db954;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.destaque {
+    border: 2px solid #1db954;
+}
+
+.btn-premium {
+    background: #1ed760;
+}

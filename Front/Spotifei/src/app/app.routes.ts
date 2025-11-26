@@ -5,6 +5,7 @@ import { LoginComponent } from './layout/login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { TelaAlbumComponent } from './layout/tela-album/tela-album.component';
 import { CriacaoPlaylistComponent } from './layout/criacao-playlist/criacao-playlist.component';
+import { PlanosComponent } from './planos/planos.component';
 
 export const routes: Routes = [
     { path: "equipe", component: EquipeComponent },
@@ -13,9 +14,10 @@ export const routes: Routes = [
     {path: "layout", component: LayoutComponent},
     {path: "tela-album", component: TelaAlbumComponent},
     {path: "criacao-playlist", component: CriacaoPlaylistComponent},
+     { path: "planos", component: PlanosComponent },
     {
         path: "",
-        redirectTo: "layout",
+        redirectTo: "login",
         pathMatch: "full"
     }
 

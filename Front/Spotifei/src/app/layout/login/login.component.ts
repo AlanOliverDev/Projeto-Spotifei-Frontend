@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterLink } from "@angular/router";
+import { FormsModule } from '@angular/forms'; // ngModel
+import { HttpClient } from '@angular/common/http';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, NgIf, HttpClientModule, RouterLink],
+  imports: [RouterLink, FormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -16,27 +16,24 @@ export class LoginComponent {
   senha: string = '';
   erro: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient) {}
 
   login() {
-    if (!this.email || !this.senha) {
-      this.erro = "Preencha e-mail e senha!";
-      return;
-    }
-
-    this.http.post<boolean>('/api/usuarios', { email: this.email, senha: this.senha })
+    // chamada para a sua API
+    this.http.post<boolean>("/api/login", { email: this.email, senha: this.senha })
       .subscribe({
         next: (ok) => {
           if (ok) {
+            alert("Login OK!");
             this.erro = '';
-            this.router.navigate(['/layout']); // navega para a página principal
+            // aqui você pode navegar usando RouterLink no HTML ou Router programaticamente
           } else {
-            this.erro = 'Usuário ou senha inválidos';
+            this.erro = "Usuário ou senha inválidos";
           }
         },
         error: (err) => {
           console.error(err);
-          this.erro = 'Erro ao tentar conectar com o servidor!';
+          this.erro = "Erro ao tentar logar";
         }
       });
   }
