@@ -24,20 +24,22 @@ export class LoginComponent {
       return;
     }
 
-    this.http.post<boolean>('/api/usuarios', { email: this.email, senha: this.senha })
-      .subscribe({
-        next: (ok) => {
-          if (ok) {
-            this.erro = '';
-            this.router.navigate(['/layout']); // navega para a página principal
-          } else {
-            this.erro = 'Usuário ou senha inválidos';
-          }
-        },
-        error: (err) => {
-          console.error(err);
-          this.erro = 'Erro ao tentar conectar com o servidor!';
-        }
-      });
+   this.http.post<boolean>(`/api/login?email=${this.email}&senha=${this.senha}`, {})
+  .subscribe({
+    next: (ok) => {
+      if (ok) {
+        this.erro = '';
+        this.router.navigate(['/layout']);
+      } else {
+        this.erro = 'Usuário ou senha inválidos';
+      }
+    },
+    error: (err) => {
+      console.error(err);
+      this.erro = 'Erro ao tentar conectar com o servidor!';
+    }
+  });
+
+
   }
 }
